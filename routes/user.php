@@ -14,3 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Auth::routes();
+
+Route::namespace('App\\Http\\Controllers\\User')->group(function () {
+
+    Route::namespace('Dashboard')->group(function () {
+        Route::get('/', function () {
+            return redirect()->route('user.dashboard.index');
+        });
+        Route::get('/index', 'DashboardController@index')->name('user.dashboard.index');
+    });
+
+});

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Invoice xmlns:ubltr="urn:oasis:names:specification:ubl:schema:xsd:TurkishCustomizationExtensionComponents"
+         xmlns:cctc="urn:un:unece:uncefact:documentation:2"
+         xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+         xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+         xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2"
+         xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+         xmlns:xades="http://uri.etsi.org/01903/v1.3.2#"
+         xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2"
+         schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 UBL-Invoice-2.1.xsd"
+         xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+    <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+    <cbc:CustomizationID>TR1.2</cbc:CustomizationID>
+    <cbc:ProfileID>EARSIVFATURA</cbc:ProfileID>
+    <cbc:ID>UXA2020000010892</cbc:ID>
+    <cbc:CopyIndicator>false</cbc:CopyIndicator>
+    <cbc:UUID>863cda55-cd84-44cb-baa6-1514ffeda6b8</cbc:UUID>
+    <cbc:IssueDate>2020-12-25</cbc:IssueDate>
+    <cbc:IssueTime>22:32:05.0000000+03:00</cbc:IssueTime>
+    <cbc:InvoiceTypeCode>SATIS</cbc:InvoiceTypeCode>
+    <cbc:Note/>
+    <cbc:Note/>
+    <cbc:DocumentCurrencyCode>TRY</cbc:DocumentCurrencyCode>
+    <cbc:PricingCurrencyCode>TRY</cbc:PricingCurrencyCode>
+    <cbc:LineCountNumeric>2</cbc:LineCountNumeric>
+    <cac:OrderReference>
+        <cbc:ID>69</cbc:ID>
+        <cbc:IssueDate>2020-12-25</cbc:IssueDate>
+    </cac:OrderReference>
+    <cac:AdditionalDocumentReference>
+        <cbc:ID>6fb7d869-88f0-4f36-b491-bcf996e0878c</cbc:ID>
+        <cbc:IssueDate>2020-12-15</cbc:IssueDate>
+        <cbc:DocumentType>Xslt</cbc:DocumentType>
+        <cac:Attachment>
+            <cbc:EmbeddedDocumentBinaryObject mimeCode="application/xml" encodingCode="Base64" characterSetCode="UTF-8"
+                                              filename="UXA2020000010892.xslt">
+
+            </cbc:EmbeddedDocumentBinaryObject>
+        </cac:Attachment>
+    </cac:AdditionalDocumentReference>
+    <cac:AccountingSupplierParty>
+        <cac:Party>
+            <cac:PartyIdentification>
+                <cbc:ID schemeID="VKN">9000068418</cbc:ID>
+            </cac:PartyIdentification>
+            <cac:PartyIdentification>
+                <cbc:ID schemeID="MERSISNO"/>
+            </cac:PartyIdentification>
+            <cac:PartyIdentification>
+                <cbc:ID schemeID="TICARETSICILNO"/>
+            </cac:PartyIdentification>
+            <cac:PartyName>
+                <cbc:Name>Radikal Tur Turizm ve Su Sporları LTD. ŞTİ.</cbc:Name>
+            </cac:PartyName>
+            <cac:PostalAddress>
+                <cbc:Room>17/1</cbc:Room>
+                <cbc:StreetName/>
+                <cbc:BuildingNumber>17/1</cbc:BuildingNumber>
+                <cbc:CitySubdivisionName>KADIKÖY</cbc:CitySubdivisionName>
+                <cbc:CityName>İSTANBUL</cbc:CityName>
+                <cac:Country>
+                    <cbc:Name>Türkiye</cbc:Name>
+                </cac:Country>
+            </cac:PostalAddress>
+            <cac:PartyTaxScheme>
+                <cac:TaxScheme>
+                    <cbc:Name>KADIKÖY</cbc:Name>
+                </cac:TaxScheme>
+            </cac:PartyTaxScheme>
+        </cac:Party>
+    </cac:AccountingSupplierParty>
+    <cac:AccountingCustomerParty>
+        <cac:Party>
+            <cac:PartyIdentification>
+                <cbc:ID schemeID="TCKN">14639189012</cbc:ID>
+            </cac:PartyIdentification>
+            <cac:PostalAddress>
+                <cbc:Room/>
+                <cbc:StreetName>Zafer Mah., Kemalpaşa Cad., No:110/C Bornova</cbc:StreetName>
+                <cbc:BuildingNumber/>
+                <cbc:CitySubdivisionName/>
+                <cbc:CityName/>
+                <cac:Country>
+                    <cbc:Name>Türkiye</cbc:Name>
+                </cac:Country>
+            </cac:PostalAddress>
+            <cac:PartyTaxScheme>
+                <cac:TaxScheme>
+                    <cbc:Name>EGE VERGİ DAİRESİ</cbc:Name>
+                </cac:TaxScheme>
+            </cac:PartyTaxScheme>
+            <cac:Contact>
+                <cbc:Telephone>0 (232) 458 04 10</cbc:Telephone>
+                <cbc:Telefax/>
+                <cbc:ElectronicMail>egemeczanesi@hotmail.com</cbc:ElectronicMail>
+            </cac:Contact>
+            <cac:Person>
+                <cbc:FirstName>Egem</cbc:FirstName>
+                <cbc:FamilyName>Eczanesi</cbc:FamilyName>
+            </cac:Person>
+        </cac:Party>
+    </cac:AccountingCustomerParty>
+    <cac:TaxTotal>
+        <cbc:TaxAmount currencyID="TRY">164.59</cbc:TaxAmount>
+        <cac:TaxSubtotal>
+            <cbc:TaxAmount currencyID="TRY">164.59</cbc:TaxAmount>
+            <cbc:Percent>8</cbc:Percent>
+            <cac:TaxCategory>
+                <cac:TaxScheme>
+                    <cbc:Name>KDV</cbc:Name>
+                    <cbc:TaxTypeCode>0015</cbc:TaxTypeCode>
+                </cac:TaxScheme>
+            </cac:TaxCategory>
+        </cac:TaxSubtotal>
+    </cac:TaxTotal>
+    <cac:LegalMonetaryTotal>
+        <cbc:LineExtensionAmount currencyID="TRY">-151.42</cbc:LineExtensionAmount>
+        <cbc:TaxExclusiveAmount currencyID="TRY">-151.42</cbc:TaxExclusiveAmount>
+        <cbc:TaxInclusiveAmount currencyID="TRY">13.17</cbc:TaxInclusiveAmount>
+        <cbc:AllowanceTotalAmount currencyID="TRY">0.00</cbc:AllowanceTotalAmount>
+        <cbc:PayableAmount currencyID="TRY">13.17</cbc:PayableAmount>
+    </cac:LegalMonetaryTotal>
+</Invoice>

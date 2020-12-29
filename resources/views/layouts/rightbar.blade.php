@@ -1,28 +1,23 @@
 <div id="kt_quick_user" class="offcanvas offcanvas-right p-10">
-    <!--begin::Header-->
     <div class="offcanvas-header d-flex align-items-center justify-content-between pb-5">
         <h3 class="font-weight-bold m-0">Profilim</h3>
         <a href="#" class="btn btn-xs btn-icon btn-light btn-hover-primary" id="kt_quick_user_close">
             <i class="ki ki-close icon-xs text-muted"></i>
         </a>
     </div>
-    <!--end::Header-->
-    <!--begin::Content-->
     <div class="offcanvas-content pr-5 mr-n5">
-        <!--begin::Header-->
         <div class="d-flex align-items-center mt-5">
             <div class="symbol symbol-100 mr-5">
                 <div class="symbol-label" style="background-image:url('{{ asset('assets/media/logos/ayssoft_crm.png') }}')"></div>
                 <i class="symbol-badge bg-success"></i>
             </div>
             <div class="d-flex flex-column">
-                <a href="#" class="font-weight-bold font-size-h5 text-dark-75 text-hover-primary">{{ $authenticated->AdSoyad }}</a>
+                <a href="#" class="font-weight-bold font-size-h5 text-dark-75 text-hover-primary">{{ @$authenticated->name }}</a>
                 <div class="navi mt-2">
                     <span class="navi-item">
                         <span class="navi-link p-0 pb-2">
                             <span class="navi-icon mr-1">
                                 <span class="svg-icon svg-icon-lg svg-icon-primary">
-                                    <!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Mail-notification.svg-->
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                             <rect x="0" y="0" width="24" height="24" />
@@ -30,32 +25,24 @@
                                             <circle fill="#000000" opacity="0.3" cx="19.5" cy="17.5" r="2.5" />
                                         </g>
                                     </svg>
-                                    <!--end::Svg Icon-->
                                 </span>
                             </span>
-                            <span class="navi-text text-muted text-hover-primary">{{ $authenticated->email }}</span>
+                            <span class="navi-text text-muted text-hover-primary">{{ @$authenticated->email }}</span>
                         </span>
                     </span>
-                    <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
-                       class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Çıkış Yap</a>
+                    <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Çıkış Yap</a>
                     <form id="logout-form" action="{{ route('logout')}}" method="POST" style="display: none;">
                         {{ csrf_field() }}
                     </form>
                 </div>
             </div>
         </div>
-        <!--end::Header-->
-        <!--begin::Separator-->
+
         <div class="separator separator-dashed mt-8 mb-5"></div>
-        <!--end::Separator-->
-        <!--begin::Nav-->
+
         <div class="navi navi-spacer-x-0 p-0">
-            <!--begin::Item-->
 
         </div>
 
-        <div class="separator separator-dashed my-7"></div>
-
     </div>
-    <!--end::Content-->
 </div>
