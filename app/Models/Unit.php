@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -14,7 +14,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static whereIn($column, array $array)
  * @method static whereBetween($column, array $array)
  */
-class Safe extends Model
+class Unit extends Model
 {
     use HasFactory, SoftDeletes;
 
@@ -23,8 +23,8 @@ class Safe extends Model
         return $this->morphedByMany(Company::class,'connection');
     }
 
-    public function activities(): MorphTo
+    public function stocks(): HasMany
     {
-        return $this->morphTo(Activity::class);
+        return $this->hasMany(Stock::class);
     }
 }

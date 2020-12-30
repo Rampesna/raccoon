@@ -17,9 +17,10 @@ class CreateCompaniesTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('tax_office')->nullable();
-            $table->string('tax_number',11);
-            $table->string('email',100)->nullable();
-            $table->string('phone_number',24)->nullable();
+            $table->string('tax_number', 11);
+            $table->string('email', 100)->nullable();
+            $table->string('phone_number', 24)->nullable();
+            $table->bigInteger('top_id', 24)->unsigned()->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

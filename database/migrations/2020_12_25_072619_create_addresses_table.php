@@ -17,6 +17,7 @@ class CreateAddressesTable extends Migration
             $table->id();
             $table->string('addressable_type',100);
             $table->bigInteger('addressable_id');
+            $table->string('title');
             $table->tinyInteger('country_id')->unsigned()->nullable();
             $table->smallInteger('state_id')->unsigned()->nullable();
             $table->mediumInteger('city_id')->unsigned()->nullable();

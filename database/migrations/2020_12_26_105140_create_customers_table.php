@@ -25,12 +25,14 @@ class CreateCustomersTable extends Migration
             $table->string('tax_number')->default('11111111111');
             $table->string('email')->nullable();
             $table->string('phone_number')->nullable();
+            $table->float('balance')->default(0);
             $table->float('starting_balance')->default(0);
+            $table->date('starting_balance_date')->nullable();
             $table->string('iban', 26)->nullable();
             $table->bigInteger('category_id')->unsigned()->nullable();
             $table->bigInteger('tag_id')->unsigned()->nullable();
             $table->string('currency_type', 3)->default('TRY');
-            $table->string('due_date')->default(0);
+            $table->date('due_date')->nullable();
             $table->float('discount_rate')->default(0);
             $table->float('risk_limit')->default(0);
             $table->text('notes')->nullable();

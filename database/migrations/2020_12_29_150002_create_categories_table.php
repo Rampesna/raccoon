@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateInvoiceActivitiesTable extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateInvoiceActivitiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('invoice_activities', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('invoice_id')->unsigned();
-            $table->bigInteger('customer_id')->unsigned();
-            $table->boolean('direction')->default(0);
+            $table->string('type');
+            $table->string('name');
+            $table->string('background_color',32)->nullable();
+            $table->string('font_color',32)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -30,6 +31,6 @@ class CreateInvoiceActivitiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('invoice_activities');
+        Schema::dropIfExists('categories');
     }
 }

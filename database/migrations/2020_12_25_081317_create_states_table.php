@@ -16,13 +16,13 @@ class CreateStatesTable extends Migration
         Schema::create('states', function (Blueprint $table) {
             $table->smallIncrements('id');
             $table->string('name');
-            $table->tinyInteger('country_id');
+            $table->tinyInteger('country_id')->unsigned();
             $table->char('country_code',2);
             $table->string('fips_code')->nullable();
             $table->char('iso2',2)->nullable();
             $table->decimal('latitude', 10, 8)->nullable();
             $table->decimal('longitude', 11, 8)->nullable();
-            $table->tinyInteger('flag')->default(1);
+            $table->tinyInteger('flag')->default(1)->unsigned();
             $table->string('wikiDataId', 255);
             $table->timestamps();
             $table->softDeletes();

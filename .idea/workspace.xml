@@ -2,25 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e945d790-418f-4e2d-ba05-c75455ca019d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/View/Composers/AuthenticatedComposer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/dashboard/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Dashboard/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Dashboard/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Address.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Address.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Bank.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Bank.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/BankActivity.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/City.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/City.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Collateral.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Collateral.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/CollateralActivity.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Company.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Company.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Country.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Country.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Customer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Invoice.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Invoice.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/InvoiceActivity.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/InvoiceItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/InvoiceItem.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/InvoiceItemTransaction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/InvoiceItemTransaction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/InvoiceItemTransactionType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/InvoiceItemTransactionType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/InvoiceType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/InvoiceType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Permission.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Role.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Safe.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Safe.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/SafeActivity.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/SerialNumber.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/SerialNumber.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/State.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/State.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Stock.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Stock.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/StockActivity.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_25_070600_create_companies_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_25_070600_create_companies_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_25_072619_create_addresses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_25_072619_create_addresses_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_25_081317_create_states_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_25_081317_create_states_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_26_105140_create_customers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_26_105140_create_customers_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_26_130239_create_invoices_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_26_130239_create_invoices_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_26_132152_create_serial_numbers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_26_132152_create_serial_numbers_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_26_221957_create_stocks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_26_221957_create_stocks_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_27_115607_create_stock_activities_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_27_121035_create_invoice_activities_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_27_121241_create_bank_activities_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_27_122053_create_collaterals_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_27_122053_create_collaterals_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_27_122102_create_banks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_27_122102_create_banks_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_27_122123_create_safes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_27_122123_create_safes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_27_122133_create_safe_activities_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_27_122327_create_collateral_activities_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/rightbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/rightbar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/ajax.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/ajax.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/user.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -162,13 +188,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PhpstormProjects/ik" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PhpstormProjects/backlinkSystem" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Users\talha\AppData\Local\JetBrains\Toolbox\apps\PhpStorm\ch-0\203.5981.175\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\talha\raccoon\app\Http\View\Composers" />
       <recent name="C:\Users\talha\raccoon\routes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -196,7 +223,8 @@
       <workItem from="1609014238801" duration="6967000" />
       <workItem from="1609060801436" duration="5962000" />
       <workItem from="1609188888983" duration="21000" />
-      <workItem from="1609221753030" duration="9249000" />
+      <workItem from="1609221753030" duration="19394000" />
+      <workItem from="1609307096111" duration="7712000" />
     </task>
     <servers />
   </component>

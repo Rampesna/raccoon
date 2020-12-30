@@ -15,13 +15,17 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::namespace('App\\Http\\Controllers\\User')->group(function () {
+Route::middleware(['auth'])->namespace('App\\Http\\Controllers\\User')->group(function () {
+
+    Route::get('example', function () {
+        return \App\Models\Country::find(1)->cities;
+    });
 
     Route::namespace('Dashboard')->group(function () {
         Route::get('/', function () {
             return redirect()->route('user.dashboard.index');
-        });
-        Route::get('/index', 'DashboardController@index')->name('user.dashboard.index');
+        })->middleware('Has:1');
+        Route::get('/index', 'DashboardController@index')->name('user.dashboard.index')->middleware('Has:1');
     });
 
 });

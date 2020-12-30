@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSafeActivitiesTable extends Migration
+class CreateActivitiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,14 @@ class CreateSafeActivitiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('safe_activities', function (Blueprint $table) {
+        Schema::create('activities', function (Blueprint $table) {
             $table->id();
+            $table->string('activityable_type');
+            $table->string('activityable_id');
             $table->bigInteger('customer_id')->unsigned();
-            $table->bigInteger('safe_id')->unsigned();
             $table->boolean('direction')->default(0);
+            $table->text('description')->nullable();
+            $table->boolean('amount')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });
@@ -30,6 +33,6 @@ class CreateSafeActivitiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('safe_activities');
+        Schema::dropIfExists('activities');
     }
 }

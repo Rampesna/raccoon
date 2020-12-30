@@ -5,7 +5,7 @@
 @section('content')
     <div class="login login-1 login-signin-on d-flex flex-column flex-lg-row flex-row-fluid bg-white" id="kt_login">
         <!--begin::Aside-->
-        <div class="login-aside d-flex flex-row-auto bgi-size-cover bgi-no-repeat p-10 p-lg-10" style="background-image: url({{ asset('assets/media/bg/bg-4.jpg') }});">
+        <div class="login-aside d-flex flex-row-auto bgi-size-cover bgi-no-repeat p-10 p-lg-10" style="background-image: url({{ asset('assets/media/bg/bg-10.jpg') }});">
             <!--begin: Aside Container-->
             <div class="d-flex flex-row-fluid flex-column justify-content-between">
                 <!--begin: Aside header-->
@@ -15,12 +15,12 @@
                 <!--end: Aside header-->
                 <!--begin: Aside content-->
                 <div class="flex-column-fluid d-flex flex-column justify-content-center">
-                    <h3 class="font-size-h1 mb-5 text-white">CRM</h3>
+                    <h3 class="font-size-h1 mb-5 text-white">Raccoon</h3>
                 </div>
                 <!--end: Aside content-->
                 <!--begin: Aside footer for desktop-->
                 <div class="d-none flex-column-auto d-lg-flex justify-content-between mt-10">
-                    <div class="opacity-70 font-weight-bold text-white">© 2020 Ayssoft</div>
+                    <div class="opacity-70 font-weight-bold text-white">© 2020 Raccoon</div>
                     <div class="d-flex">
                         <a href="#" class="text-white">Gizlilik Sözleşmesi</a>
                         <a href="#" class="text-white ml-10">Yasal</a>

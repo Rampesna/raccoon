@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCollateralActivitiesTable extends Migration
+class CreateUnitsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateCollateralActivitiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('collateral_activities', function (Blueprint $table) {
+        Schema::create('units', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('customer_id')->unsigned();
-            $table->bigInteger('bank_id')->unsigned();
-            $table->boolean('type')->default(0);
-            $table->boolean('direction')->default(0);
+            $table->string('name',50);
+            $table->string('code',10);
             $table->timestamps();
             $table->softDeletes();
         });
@@ -31,6 +29,6 @@ class CreateCollateralActivitiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('collateral_activities');
+        Schema::dropIfExists('units');
     }
 }

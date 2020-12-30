@@ -15,7 +15,6 @@ class CreateSerialNumbersTable extends Migration
     {
         Schema::create('serial_numbers', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('company_id')->unsigned();
             $table->char('name', 3);
             $table->tinyInteger('type_id')->unsigned();
             $table->string('year', 4);

@@ -17,14 +17,13 @@ class CreateInvoicesTable extends Migration
             $table->id();
             $table->boolean('electronic')->default(0);
             $table->string('ettn')->nullable(); // ettn
-            $table->bigInteger('company_id')->unsigned(); // Hangi Firmamdan Gönderiyorum...
             $table->tinyInteger('customer_id')->unsigned(); // Müşteri
             $table->date('date'); // Fatura Tarihi
             $table->time('time'); // Fatura Saati
             $table->time('serial_number_id'); // Faturanın Seri Numarası
             $table->string('profile_id')->nullable(); // Senaryo Tipi (EFATURA - EARSİV)
             $table->string('scenario_type')->nullable(); // Temel - Ticari - Earşiv vb...
-            $table->tinyInteger('invoice_type_id')->unsigned()->nullable(); // Alış - Satış - İstisna vb...
+            $table->tinyInteger('type_id')->unsigned()->nullable(); // Alış - Satış - İstisna vb...
             $table->date('due_date')->nullable();
             $table->char('currency_type', 3);
             $table->float('currency');

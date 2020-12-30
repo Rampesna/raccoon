@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBankActivitiesTable extends Migration
+class CreateSerialNumberTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateBankActivitiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('bank_activities', function (Blueprint $table) {
-            $table->id();
-            $table->bigInteger('customer_id')->unsigned();
-            $table->bigInteger('bank_id')->unsigned();
-            $table->boolean('direction')->default(0);
+        Schema::create('serial_number_types', function (Blueprint $table) {
+            $table->tinyIncrements('id');
+            $table->string('name');
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
@@ -30,6 +27,6 @@ class CreateBankActivitiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bank_activities');
+        Schema::dropIfExists('serial_number_types');
     }
 }

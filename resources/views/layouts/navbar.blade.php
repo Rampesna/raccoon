@@ -16,9 +16,24 @@
                         <div class="kt-quick-search" id="kt_quick_search_default">
                             <div class="form-group row ">
                                 <div class="col-xl-12" style="width:400px">
-                                    <select class="form-control selectpicker" id="FirmaList" name="param" style="width:100%">
-
-                                    </select>
+                                    <label style="width:100%">
+                                        <select class="form-control selectpicker" name="param">
+                                            @foreach($companies as $company)
+                                                @if($company->top_id == null)
+                                                    <optgroup label="{{ $company->name }}" class="text-primary">
+                                                        <option value="{{ $company->id }}">{{ $company->name }}</option>
+                                                        @foreach($company->subCompanies as $subCompany)
+                                                            <option value="{{ $subCompany->id }}">{{ $subCompany->name }}</option>
+                                                        @endforeach
+                                                    </optgroup>
+                                                @else
+                                                    <optgroup label="{{ $company->topCompany->name }}" class="text-primary">
+                                                        <option value="{{ $company->id }}">{{ $company->name }}</option>
+                                                    </optgroup>
+                                                @endif
+                                            @endforeach
+                                        </select>
+                                    </label>
                                 </div>
                             </div>
                         </div>
