@@ -20,9 +20,9 @@ class Company extends Model
 {
     use HasFactory, SoftDeletes;
 
-    public function users(): MorphToMany
+    public function user(): BelongsTo
     {
-        return $this->morphedByMany(User::class, 'connection');
+        return $this->belongsTo(User::class);
     }
 
     public function subCompanies(): HasMany
@@ -47,42 +47,42 @@ class Company extends Model
 
     public function banks(): MorphToMany
     {
-        return $this->morphToMany(Bank::class,'connection');
+        return $this->morphToMany(Bank::class, 'connection');
     }
 
     public function safes(): MorphToMany
     {
-        return $this->morphToMany(Safe::class,'connection');
+        return $this->morphToMany(Safe::class, 'connection');
     }
 
     public function collaterals(): MorphToMany
     {
-        return $this->morphToMany(Collateral::class,'connection');
+        return $this->morphToMany(Collateral::class, 'connection');
     }
 
     public function invoices(): MorphToMany
     {
-        return $this->morphToMany(Invoice::class,'connection');
+        return $this->morphToMany(Invoice::class, 'connection');
     }
 
     public function stocks(): MorphToMany
     {
-        return $this->morphToMany(Stock::class,'connection');
+        return $this->morphToMany(Stock::class, 'connection');
     }
 
     public function customers(): MorphToMany
     {
-        return $this->morphToMany(Customer::class,'connection');
+        return $this->morphedByMany(Customer::class, 'connection');
     }
 
     public function units(): MorphToMany
     {
-        return $this->morphToMany(Unit::class,'connection');
+        return $this->morphToMany(Unit::class, 'connection');
     }
 
     public function serialNumbers(): MorphToMany
     {
-        return $this->morphToMany(SerialNumber::class,'connection');
+        return $this->morphToMany(SerialNumber::class, 'connection');
     }
 
     public function addresses(): MorphTo

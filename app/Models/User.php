@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -52,6 +53,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function id()
+    {
+        return $this->id;
+    }
+
     public function role(): BelongsTo
     {
         return $this->belongsTo(Role::class);
@@ -62,14 +68,23 @@ class User extends Authenticatable
         return $this->role->permissions()->where('permission_id', $permission)->exists() ? true : false;
     }
 
-    public function companies(): MorphToMany
+    public function companies(): HasMany
     {
-        return $this->morphToMany(Company::class,'connection');
+        return $this->hasMany(Company::class);
+    }
+
+    public function customers()
+    {
+        $customers = [];
+        foreach ($this->companies as $company) {
+            $customers[] = $company->customers;
+        }
+        return $customers;
     }
 
     public function topUser(): BelongsTo
     {
-        return $this->belongsTo(User::class,'top_id','id');
+        return $this->belongsTo(User::class, 'top_id', 'id');
     }
 
     public function addresses(): MorphTo

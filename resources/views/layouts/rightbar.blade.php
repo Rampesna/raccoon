@@ -1,6 +1,6 @@
 <div id="kt_quick_user" class="offcanvas offcanvas-right p-10">
     <div class="offcanvas-header d-flex align-items-center justify-content-between pb-5">
-        <h3 class="font-weight-bold m-0">Profilim</h3>
+        <h3 class="font-weight-bold m-0">{{ __('rightbar.user.profile') }}</h3>
         <a href="#" class="btn btn-xs btn-icon btn-light btn-hover-primary" id="kt_quick_user_close">
             <i class="ki ki-close icon-xs text-muted"></i>
         </a>
@@ -8,7 +8,8 @@
     <div class="offcanvas-content pr-5 mr-n5">
         <div class="d-flex align-items-center mt-5">
             <div class="symbol symbol-100 mr-5">
-                <div class="symbol-label" style="background-image:url('{{ asset('assets/media/logos/ayssoft_crm.png') }}')"></div>
+                <div class="symbol-label"
+                     style="background-image:url('{{ !is_null($authenticated->image) ? asset($authenticated->image) : asset('assets/media/logos/avatar.jpg') }}')"></div>
                 <i class="symbol-badge bg-success"></i>
             </div>
             <div class="d-flex flex-column">
@@ -30,10 +31,7 @@
                             <span class="navi-text text-muted text-hover-primary">{{ @$authenticated->email }}</span>
                         </span>
                     </span>
-                    <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Çıkış Yap</a>
-                    <form id="logout-form" action="{{ route('logout')}}" method="POST" style="display: none;">
-                        {{ csrf_field() }}
-                    </form>
+
                 </div>
             </div>
         </div>

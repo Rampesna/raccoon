@@ -15,9 +15,12 @@ class CreateCompaniesTable extends Migration
     {
         Schema::create('companies', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('user_id')->unsigned();
             $table->string('name');
             $table->string('tax_office')->nullable();
             $table->string('tax_number', 11);
+            $table->string('registration_number ', 12)->nullable();
+            $table->string('central_registration_number', 19)->nullable();
             $table->string('email', 100)->nullable();
             $table->string('phone_number', 24)->nullable();
             $table->bigInteger('top_id', 24)->unsigned()->nullable();

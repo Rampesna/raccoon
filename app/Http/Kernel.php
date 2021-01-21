@@ -3,7 +3,9 @@
 namespace App\Http;
 
 use App\Http\Middleware\Has;
+use App\Http\Middleware\Language;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
+use SebastianBergmann\CodeUnitReverseLookup\Wizard;
 
 class Kernel extends HttpKernel
 {
@@ -64,5 +66,7 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'Has' => Has::class,
+        'Wizard' => \App\Http\Middleware\Wizard::class,
+        'Language' => Language::class,
     ];
 }

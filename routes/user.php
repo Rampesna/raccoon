@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,17 +16,44 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::middleware(['auth'])->namespace('App\\Http\\Controllers\\User')->group(function () {
+Route::any('language/{language?}', [\App\Http\Controllers\HomeController::class, 'language'])->name('language');
+Route::middleware(['auth', 'Language'])->namespace('App\\Http\\Controllers\\User')->group(function () {
 
-    Route::get('example', function () {
-        return \App\Models\Country::find(1)->cities;
+    Route::any('example', [\App\Http\Controllers\HomeController::class, 'example'])->name('example');
+
+    Route::middleware(['Wizard'])->group(function () {
+
+        Route::namespace('Dashboard')->group(function () {
+            Route::get('/', function () {
+                return redirect()->route('user.dashboard.index');
+            });
+            Route::get('/index', 'DashboardController@index')->name('user.dashboard.index')->middleware('Has:1');
+        });
+
+        Route::namespace('Earnings')->prefix('earnings')->group(function () {
+
+            Route::prefix('customer')->group(function () {
+                Route::get('/', function () {
+                    return redirect()->route('user.customer.index');
+                });
+                Route::get('/index/{company_id?}', 'Customer@index')->name('user.customer.index')->middleware('Has:2');
+                Route::get('/create', 'Customer@create')->name('user.customer.create')->middleware('Has:3');
+            });
+
+        });
+
+        Route::namespace('Expenses')->prefix('expenses')->group(function () {
+
+            Route::prefix('supplier')->group(function () {
+                Route::get('/', function () {
+                    return redirect()->route('user.supplier.index');
+                });
+                Route::get('/index/{customer?}', 'Supplier@index')->name('user.supplier.index')->middleware('Has:1');
+            });
+
+        });
+
     });
 
-    Route::namespace('Dashboard')->group(function () {
-        Route::get('/', function () {
-            return redirect()->route('user.dashboard.index');
-        })->middleware('Has:1');
-        Route::get('/index', 'DashboardController@index')->name('user.dashboard.index')->middleware('Has:1');
-    });
 
 });

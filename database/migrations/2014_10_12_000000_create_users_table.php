@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->bigInteger('top_id')->unsigned()->nullable();
             $table->string('phone_number',24)->nullable();
             $table->bigInteger('role_id')->unsigned();
+            $table->string('image')->nullable();
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();

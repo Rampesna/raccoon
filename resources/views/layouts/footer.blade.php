@@ -4,7 +4,7 @@
         <!--begin::Copyright-->
         <div class="text-dark order-2 order-md-1">
             <span class="text-muted font-weight-bold mr-2">2020©</span>
-            <a href="javascript:void(0)" class="text-dark-75 text-hover-primary">Ayssoft Bilgi Sistemleri A.Ş.</a>
+            <a href="javascript:void(0)" class="text-dark-75 text-hover-primary">Raccoon</a>
         </div>
         <!--end::Copyright-->
         <!--begin::Nav-->
